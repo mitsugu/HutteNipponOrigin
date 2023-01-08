@@ -1,4 +1,5 @@
 (function(){
+  var mainURL = browser.runtime.getURL("popup/main.html");
   const region = {
     "011000" : ["宗谷地方"],
     "012000" : ["上川地方","留萌地方"],
@@ -58,16 +59,22 @@
     "474000" : ["石垣島地方","与那国島地方"]
   };
 
+  function setItem() {
+    browser.runtime.sendMessage({status:"set location"});
+    window.close();
+  }
+
+  function onError(error) {
+    console.error(error);
+    window.close();
+  }
+
   function onOK(){
     var elmPref = document.getElementById('pref_list');
     var elmReg  = document.getElementById('reg_list');
     browser.storage.local.set(
-      {"location":{"prefecture":elmPref.value,"region":elmReg.value}},
-      (error)=>{
-        console.log(`Error: ${error}`);
-      }
-    );
-    window.close();
+      {"location":{"prefecture":elmPref.value,"region":elmReg.value}}
+    ).then(setItem, onError);
   }
 
   function onCancel(){

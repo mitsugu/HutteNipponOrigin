@@ -1,6 +1,6 @@
 (function(){
   function getOverallText(){
-    chrome.runtime.sendMessage({request:"send overall"},function (response) {
+    browser.runtime.sendMessage({request:"send overall"},function (response) {
       document.getElementById("overall").value=response;
     });
   }

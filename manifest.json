@@ -1,43 +1,41 @@
 {
   "manifest_version": 2,
-  "name": "WWF Japan",
-  "version": "1.1.1",
-
-  "browser_specific_settings": {
-    "gecko": {
-      "id": "wwfjapan@orzbruford.com"
-    }
+  "name":"Weekly Weather Forcast for Japan",
+  "short_name":"WWF Japan",
+  "version":"1.2.0",
+  "description":"日本の週間天気予報を表示します。",
+  "author": "mitsugu oyama ( OrzBruford )",
+  "developer": {
+    "name": "mitsugu oyama ( OrzBruford )",
+    "url": "https://orzbruford.nobody.jp/"
   },
-
-  "description": "日本の週間天気予報を表示します。",
+  "homepage_url":"https://github.com/mitsugu/HutteNipponOrigin",
 
   "icons": {
-    "48": "icons/48.png",
-    "96": "icons/96.png"
+    "16":"system_icons/16.png",
+    "48":"system_icons/48.png",
+    "128":"system_icons/128.png"
+  },
+
+  "browser_specific_settings": {
+    "gecko": {"id": "wwfjapan@orzbruford.com"}
   },
 
   "browser_action": {
-    "default_icon": {
-      "19": "button/19.png",
-      "38": "button/38.png"
-    },
-    "default_title":"WWF Japan",
+    "default_icon": "system_icons/weather-clear.svg",
+    "default_title":"Weekly Weather Forcast for Japan",
+    "default_popup":"popup/popup.html",
     "browser_style":true
   },
 
-  "background": {
-    "scripts": ["bgs.js"]
-  },
-
   "permissions": [
+    "storage",
+    "tabs",
     "http://www.jma.go.jp/",
     "https://www.jma.go.jp/",
     "http://www.data.jma.go.jp/",
     "https://www.data.jma.go.jp/",
     "http://cyberjapandata.gsi.go.jp/",
-    "https://cyberjapandata.gsi.go.jp/",
-    "storage",
-    "tabs",
-    "contextMenus"
+    "https://cyberjapandata.gsi.go.jp/"
   ]
 }
