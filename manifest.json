@@ -1,8 +1,8 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name":"Weekly Weather Forcast for Japan",
   "short_name":"WWF Japan",
-  "version":"1.2.0",
+  "version":"2.0.0",
   "description":"日本の週間天気予報を表示します。",
   "author": "mitsugu oyama ( OrzBruford )",
   "developer": {
@@ -18,10 +18,13 @@
   },
 
   "browser_specific_settings": {
-    "gecko": {"id": "wwfjapan@orzbruford.com"}
+    "gecko": {
+      "id": "wwfjapan@orzbruford.com",
+      "strict_min_version": "109.0"
+    }
   },
 
-  "browser_action": {
+  "action": {
     "default_icon": "system_icons/weather-clear.svg",
     "default_title":"Weekly Weather Forcast for Japan",
     "default_popup":"popup/popup.html",
@@ -30,7 +33,10 @@
 
   "permissions": [
     "storage",
-    "tabs",
+    "tabs"
+  ],
+
+  "host_permissions": [
     "http://www.jma.go.jp/",
     "https://www.jma.go.jp/",
     "http://www.data.jma.go.jp/",
