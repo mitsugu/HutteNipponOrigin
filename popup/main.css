@@ -83,12 +83,14 @@
   color:red;
 }
 .probability_box{
+  font-size: 0.75em;
   width:101px;
   height:28px;
   border-width:1px;
   border-top-style:solid;
   display:flex;
   justify-content:center;
+  vertical-align: middle;
 }
 .menu_button{
   width:134px;

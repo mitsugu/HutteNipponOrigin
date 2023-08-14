@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name":"Weekly Weather Forcast for Japan",
   "short_name":"WWF Japan",
-  "version":"2.0.0",
+  "version":"2.0.1",
   "description":"日本の週間天気予報を表示します。",
   "author": "mitsugu oyama ( OrzBruford )",
   "developer": {
@@ -27,13 +27,11 @@
   "action": {
     "default_icon": "system_icons/weather-clear.svg",
     "default_title":"Weekly Weather Forcast for Japan",
-    "default_popup":"popup/popup.html",
-    "browser_style":true
+    "default_popup":"popup/popup.html"
   },
 
   "permissions": [
-    "storage",
-    "tabs"
+    "storage"
   ],
 
   "host_permissions": [
