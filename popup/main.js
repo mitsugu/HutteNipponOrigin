@@ -1048,7 +1048,6 @@
     document.getElementById('locationButton').addEventListener('click',selectLocation);
     document.getElementById('overall_button').addEventListener("click",openOverall);
     document.getElementById('map_button').addEventListener("click",openMap);
-    document.getElementById('nowcast_button').addEventListener("click",openNowcast);
     document.getElementById('satellite_button').addEventListener("click",openSatellite);
     document.getElementById('jma_button').addEventListener("click",openJma);
     document.getElementById('htb_button').addEventListener("click",openHtb);
